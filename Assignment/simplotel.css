@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.06rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+nav {
+    background-color: #ffffff;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav li {
+    height: 60px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.logo-image {
+    height: 80px;
+    width: 100px;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.sidebar li a {
+    width: 100%;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.side-button {
+    font-size: 25px;
+    color: #000000;
+}
+
+.menu-button {
+    display: none;
+}
+
+.hero_section {
+    height: calc(100vh - 50px);
+    width: 100%;
+    overflow: hidden;
+    background-image: url("https://res.cloudinary.com/dukfbrh8n/image/upload/v1724087911/heroimg_pquafn.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero_section .hero_title {
+    background-image: linear-gradient(to right, black, gray);
+    color: white;
+    padding: 0.8rem 4.5rem;
+    width: auto;
+    display: inline-block;
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+}
+
+.font_sizer {
+    font-size: var(--font-size);
+    font-weight: var(--weight);
+}
+
+.hero_content_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+
+.hero_content_section .content {
+    padding: 1.5rem 2.5rem;
+    margin: 0px 10px;
+    text-align: center;
+}
+
+.hero_content_section p {
+    font-size: 0.9rem;
+}
+
+.cards_section {
+    padding: 2rem;
+    background-color:rgb(235, 223, 231);
+}
+
+.cards_container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.cards_section_title p {
+    margin: 20px 0px;
+}
+
+.card {
+    width: calc(100% - 60px);
+    max-height: 22rem;
+    margin: 4rem 0rem;
+}
+
+.cards_container:not(:last-child) {
+    margin-right: 50px;
+    ;
+}
+
+.card .card_image {
+    width: 100%;
+    max-height: 100%;
+    overflow: hidde;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.card_font {
+    padding: 0.5rem 0rem;
+    font-weight: 600;
+}
+
+.card_content {
+    text-align: var(--alignment);
+}
+
+.card_button1{
+    display: flex;
+    justify-content: flex-start;
+}
+.card_button2{
+    display: flex;
+    justify-content: center;
+}
+.card_button3{
+    display: flex;
+    justify-content: flex-end;
+}
+button {
+    font-size: 1rem;
+    padding: 0.4rem 1.8rem;
+    background-color: black;
+    color: white;
+    margin: 20px 0px;
+}
+
+
+@media screen and (width <=990px) {
+    html {
+        font-size: 13px;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .cards_container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+}
+
+@media screen and (width <=700px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media screen and (width <=500) {
+    .cards_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
